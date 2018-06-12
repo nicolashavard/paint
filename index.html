@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paint</title>
+    <link rel="stylesheet" type="text/css" href="Fontawesome/css/fontawesome-all.css">
+    <link href="bootstrap-4.1.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheet.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="application">
+    <h1>Paint</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Calques
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Calque 1</a>
+                        <a class="dropdown-item" href="#">Calque 2</a>
+                        <a class="dropdown-item" href="#">Calque 3</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div id="toolbar" class="col-1 form-group">
+            <button class="tool btn btn-dark" value="pencil"><i class="fas fa-pencil-alt"></i></button>
+            <button class="tool btn btn-dark" value="line"><i class="fas fa-minus"></i></button>
+            <button class="tool btn btn-dark" value="eraser"><i class="fas fa-eraser"></i></button>
+            <button class="tool btn btn-dark" value="clear"><i class="fas fa-trash-alt"></i></button>
+            <button class="tool btn btn-dark" value="rectangle"><i class="far fa-square"></i></button>
+            <button class="tool btn btn-dark" value="circle"><i class="far fa-circle"></i></button>
+            <button class="tool btn btn-dark" value="sym_v"><i class="fab fa-vimeo-v"></i></button>
+            <button class="tool btn btn-dark" value="sym_h"><i class="fab fa-hire-a-helper"></i></button>
+            <button class="btn btn-dark" onclick="nLayer()"><i class="fas fa-file-medical"></i></button>
+            <button class="btn btn-dark" onclick="cUndo()">Undo</button>
+            <button class="btn btn-dark" onclick="cRedo()">Redo</button>
+            <input class="form-control" id="colorpick" type="color"><label for="colorpick"></label>
+            <input class="form-control" id="sizepick" type="range" value="10" min="1" max="500"><label for="sizepick"></label>
+            <input class="form-control" id="import" type="file" style="visibility: hidden; display:none"><label class="btn btn-dark" for="import">Parcourir</label>
+            <a class="tool btn btn-dark text-white" id="download">Save file</a>
+        </div>
+        <div id="candiv" class="col-11">
+            <div id="hbarre"></div>
+            <div id="vbarre"></div>
+            <canvas class="canvas" id="canvas" width="1400" height="800"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="jquery-3.3.1.slim.min.js"></script>
+<script src="bootstrap-4.1.0-dist/js/bootstrap.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

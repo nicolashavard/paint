@@ -1,0 +1,45 @@
+.container2 {
+    width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    border:1px solid black;
+}
+
+.application{
+    margin: auto;
+    width : 1500px;
+}
+
+#toolbar, #menu{
+    border:1px solid black;
+}
+
+canvas {
+    border:1px solid black;
+}
+
+#candiv {
+    position: relative;
+}
+#vbarre, #hbarre {
+    position:absolute;
+}
+#vbarre {
+    display:none;
+    z-index: -1;
+    border-right:2px solid black;
+    width: 702px;
+    height: 801px;
+}
+
+#hbarre {
+    display:none;
+    z-index: -1;
+    border-bottom:2px solid black;
+    width: 1400px;
+    height: 402px;
+}
+
+.canvas {
+ position: absolute;
+}
